@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head><title>Home Page</title></head>
+<body>
+<nav class="navigation-bar is-visible" data-nav-status="toggle">
+    <ul>
+        <a href="/"><li>Home</li></a>
+        <a href="/remove"><li>Remove</li></a>
+        <a href="/find"><li>Find</li></a>
+        <a href="/findIndex"><li>Find Index</li></a>
+        <a href="/removeAll"><li>Remove All</li></a>
+        <a href="/reverseOrder"><li>List Reverse Order</li></a>
+    </ul>
+</nav>
+<br><br><br>
+<h1>Distributed Systems Project</h1>
+<p>You have added: <span th:text="${wordAdd}"> No word added</span></p>
+
+<form action="/add/" method="get">
+    Add another word to the vector:<br>
+    <input type="text" name="word"><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<!--<a href="/">Main Page</a>-->
+</body>
+
+<style>
+
+    body{
+        background-color: powderblue;
+        margin: 20px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    li {
+        display: inline-block;
+        padding: 1em;
+    }
+
+    .navigation-bar {
+        background-color: GhostWhite;
+        border: 1px solid Gainsboro;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+</style>
+</html>

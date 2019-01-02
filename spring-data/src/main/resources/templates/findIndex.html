@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head><title>Home Page</title></head>
+<body>
+<nav class="navigation-bar is-visible" data-nav-status="toggle">
+    <ul>
+        <a href="/"><li>Home</li></a>
+        <a href="/remove"><li>Remove</li></a>
+        <a href="/find"><li>Find</li></a>
+        <a href="/findIndex"><li>Find Index</li></a>
+        <a href="/removeAll"><li>Remove All</li></a>
+        <a href="/reverseOrder"><li>List Reverse Order</li></a>
+    </ul>
+</nav>
+<br><br><br>
+
+<h1>Distributed Systems Project</h1>
+<p>This is the content of our vector: <span th:text="${vector}"> Vecotr doesn't exist</span></p>
+
+<p>This is the index of the word you looked for: <span th:text="${wordFindIndex}"> Word doesn't exist</span></p>
+
+<form action="/findWordIndex" method="get">
+    Find a word to know its index:<br>
+    <input type="text" name="wordFindIndex"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+
+
+<style>
+    body{
+        background-color: powderblue;
+        margin: 20px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    li {
+        display: inline-block;
+        padding: 1em;
+    }
+
+    .navigation-bar {
+        background-color: GhostWhite;
+        border: 1px solid Gainsboro;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+
+
+</style>
+</html>
